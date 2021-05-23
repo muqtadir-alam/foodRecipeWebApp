@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>find meals</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="Recipe.css" />
+  
+</head>
+
+<body>
+  <div class="container">
+    <div class="meal-wrapper">
+      <div class="meal-search">
+        <h1 class="header">find meal for your gradients</h1>
+        <blockquote>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+          quo suscipit animi optio incidunt reiciendis, cupiditate molestiae
+          dolor laudantium eos dolorem odio saepe reprehenderit, tempore
+          perferendis inventore debitis, itaque possimus. <br />
+          <cite>purnea</cite>
+        </blockquote>
+       
+
+        <div class="meal-search-box">
+         <input type="text" id="search-input" class="search-control">
+          <button id="search-baar" onclick="getMealList()" class="search btn" >
+            search
+          </button>
+        </div>
+      </div>
+      <div class="meal-result">
+        <h2 class="title">your search result 👍</h2>
+        <div id="meal">
+          
+         
+         
+        </div>
+      </div>
+      <div class="meal-details">
+        <button type="button" class=" recipe-close-btn" id="recipe-close-btn"><i class="fa fa-times"></i>
+        </button>
+        <div class="meal-title">
+          <h2 class="recipe-title">meal title </h2>
+
+          <p class="recipe-catogary">category name</p>
+          <div class="recipe-instruction">
+            <h3>instructions</h3>
+            <p>Lorem ips sit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. At id laborum similique Neque
+              minima incidunt at velit voluptate voluptates, nemo recusandae
+              reiciendis eius dolor?</p>
+
+            <img class="recipe-img"
+              src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+              alt="food" srcset="" />
+            <div class="watch">
+              <a href="#">watch video</a>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="Recipe.js"></script>
+ 
+</body>
+
+</html>

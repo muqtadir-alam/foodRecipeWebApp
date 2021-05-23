@@ -1,0 +1,214 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.header {
+  color: teal;
+  font-style: italic;
+  margin: 2rem;
+}
+
+.container {
+  min-height: 100vh;
+}
+
+.meal-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.meal-search {
+  width: 80%;
+  margin: auto;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.meal-search-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-control {
+  width: 40rem;
+  height: 3rem;
+  border: 2px solid orange;
+  text-align: center;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  outline: none;
+}
+
+.search-control::placeholder {
+  color: orange;
+}
+
+.btn {
+  background-color: orange;
+  color: #fff;
+  border: none;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  font-size: 2rem;
+  outline: none;
+  cursor: pointer;
+  width: 10rem;
+  height: 3rem;
+  text-align: center;
+  margin-top: 0%;
+}
+
+.btn:hover{
+
+  background-color: teal;
+}
+
+#meal{
+  
+display: flex;
+flex-wrap: wrap;
+}
+
+.meal-result {
+  margin: 3rem;
+}
+
+
+.meal-item{
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 4px 21px -12px;
+  margin: 2rem ;
+
+
+}
+
+.meal-img{
+   width: 20rem;
+  height: 10rem;
+  margin-bottom: 2rem;
+}
+img{
+  width: 20rem;
+  height: 13rem;
+  margin-bottom: 2rem;
+
+}
+
+.meal-name{
+
+  text-align: center;
+  padding: 2rem;
+  background-color:#fff;
+  z-index: 10;
+}
+
+
+.recipe-btn{
+text-decoration: none;
+background-color: orange;
+border-radius: 4rem;
+padding: .4rem;
+margin-top: 10px;
+
+}
+
+.recipe-btn:hover{
+  background-color: orangered;
+}
+
+@media screen and (min-width: 768){
+  #meal{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+
+  }
+  
+}
+
+
+
+
+.meal-details{
+
+  background-color: orange;
+  position: fixed;
+  width: 60%;
+  height: 85%;
+  margin-top: 5%;
+  text-align: center;
+  border-radius: 2rem;
+  padding: .5rem;
+  display: none;
+  
+  
+}
+
+.recipe-close-btn{
+  font-size: 1rem;
+  outline: none;
+  background-color: cadetblue;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 1rem;
+ 
+  
+}
+
+.meal-title{
+  
+  color: #fff;
+ 
+ 
+
+}
+
+.recipe-catogary{
+  border-radius: .5rem;
+  background-color: rgb(226, 202, 157);
+  display: inline-block;
+ 
+}
+
+
+.recipe-instruction{
+ 
+ 
+  
+}
+
+.recipe-img{
+  height: 8rem;
+  width: 8rem;
+ border-radius:50%;
+  
+  
+  
+}
+
+.watch{
+  width: 100%;
+  
+  text-align: center;
+}
+
+.watch a{
+  text-decoration: none;
+}
