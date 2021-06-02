@@ -2,22 +2,27 @@ const searchBtn = document.getElementById('search-baar');
 const mealList = document.getElementById("meal");
 const recipeCloseBtn = document.getElementById("ecipe-close-btn");
 const mealDeatailsContent = document.querySelector(".meal-details");
-console.log("my name is muqtadir alam");
+const searchResult = document.getElementById("search-result");
 searchBtn.addEventListener('click', getMealList);
 
 
-//  searchInputText.value = "";
+ searchInputText = "";
 function getMealList() {
-    let searchInputText = document.getElementById('search-input').value;
+  let searchInputText = document.getElementById('search-input').value;
+  
+  if (searchInputText) {
+   
     
     
     fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInputText} `)
-        .then(Response => Response.json())
-        .then(data => {
-            let html = " ";
-            if (data.meals) {
-                data.meals.forEach(meal => {
-                    html += ` <div class="meal-item" data-id="${meal.idMeal}">
+      .then(Response => Response.json())
+      .then(data => {
+        
+        
+        let html = " ";
+        if (data.meals!=null) {
+          data.meals.forEach(meal => {
+            html += ` <div class="meal-item" data-id="${meal.idMeal}">
                     <div class="meal-img">
                       <img
                         src="${meal.strMealThumb}" />
@@ -29,10 +34,33 @@ function getMealList() {
                     </div>
                   </div>
                     `;
-                });
-            }
-            mealList.innerHTML = html;
+          });
+        
+        }
+        else {
+          html += ` <div class="meal-item" data-id="">
+                   
+        
+                    <div class="meal-name">
+                        <h3>plse enter valid search or opps this gradiant is not here....</h3>
+                      
+                    </div>
+                  </div>
+                    `;
+        }
+      
+        mealList.innerHTML = html;
+        searchResult.style.display = "block"
+        searchInputText= "";
+        
 
-        })
+      })
+  }
+  else {
+    
+    searchResult.style.display = "none";
+   
+    
+  }
 
 }

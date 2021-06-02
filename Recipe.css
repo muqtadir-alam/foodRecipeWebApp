@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+
+
 body {
   font-weight: 300;
   font-size: 1.05rem;
@@ -87,6 +89,7 @@ flex-wrap: wrap;
 
 .meal-result {
   margin: 3rem;
+  display: none;
 }
 
 
